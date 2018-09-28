@@ -19,10 +19,10 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
     Button requestImg;
-    Button rojo;
-    Button ama;
-    Button verde;
-    Button azul;
+    //Button rojo;
+    //Button ama;
+    //Button verde;
+    //Button azul;
     TextView question;
     TextView punish;
     ImageView ico;
@@ -31,10 +31,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         requestImg = (Button)findViewById(R.id.requestImg);
-        rojo = (Button)findViewById(R.id.rojo);
-        ama = (Button)findViewById(R.id.ama);
-        verde = (Button)findViewById(R.id.verde);
-        azul = (Button)findViewById(R.id.azul);
+        //rojo = (Button)findViewById(R.id.rojo);
+        //ama = (Button)findViewById(R.id.ama);
+        //verde = (Button)findViewById(R.id.verde);
+        //azul = (Button)findViewById(R.id.azul);
         question =(TextView)findViewById(R.id.question);
         punish=(TextView)findViewById(R.id.punish);
         ico =(ImageView)findViewById(R.id.ico);
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
             }});
 
-        rojo.setOnClickListener(new View.OnClickListener() {
+       /* rojo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 rojo.setVisibility(View.GONE);
@@ -87,10 +87,10 @@ public class MainActivity extends AppCompatActivity {
                 int y=2;
                 generateIco(y);
 
-            }});
+            }});*/
     }
 
-    private void generateIco(int y) {
+    /*private void generateIco(int y) {
         String url = "http://192.168.201.24:60000/PDM/img/" + y;
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         //Ininiate queue
         RequestQueue queue = VolleySingleton.getInstance(this).getRequestQueue();
         queue.add(jsonObjectRequest);
-    }
+    }*/
 
     private void generateImg() {
 
