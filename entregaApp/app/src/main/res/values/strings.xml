@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">entregaApp</string>
+    <string name="request_msg">Request Msg</string>
+    <string name="generar_imagen">requestImg</string>
+    <string name="requestImg">Generar Imagen</string>
+    <string name="genera_preguntas">Generar preguntas</string>
+    <string name="todo">TODO</string>
+    <string name="connected">connected</string>
+    <string name="generar_pregunta">Generar Pregunta</string>
+    <string name="rojo">Rojo</string>
+    <string name="azul">Azul</string>
+    <string name="verde">Verde</string>
+    <string name="ama">AMA.</string>
+    <string name="ico">Icono</string>
+    <string name="icono">icono</string>
+</resources>
