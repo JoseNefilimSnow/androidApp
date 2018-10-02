@@ -6,24 +6,23 @@ var express = require('express');
 var app = express();
 
 var  imgrequest = express.Router();
-var e;
+
 
 //controller req --> request, res --> response
 const showHelloWorldImg = (req, res) => {
-  var f = req.params.numImage;
-  console.log(f);
-  e = iconImage(f);
+  var numReq = parseInt(req.params.numImage);
+  console.log(numReq);
+  var imgURL = iconImage(numReq);
   res.status(200).send({
-    url: e
+    url: imgURL
   });
 };
 const showHelloWorld = (req, res) => {
-  var c = randomQuest();
-  var d = randomPun();
+  var questionChoosed = randomQuest();
+  var punishChoosed = randomPun();
   res.status(200).send({
-    question: c,
-    punish: d,
-    url: e
+    question: questionChoosed,
+    punish: punishChoosed,
   });
 };
 //Routes
@@ -37,9 +36,9 @@ app.listen(port,()=>{
     console.log("Hello from port:" + port);
 })
 function randomQuest(){
-  var a = Math.floor(Math.random()*(11-1)+1);
+  var randomNum = Math.floor(Math.random()*(11-1)+1);
   //console.log(a);
-  var b;
+  var questionChoosed;
   switch(a) {
     case 1:
       b = '¿Soy más de perros o gatos?';
@@ -72,12 +71,12 @@ function randomQuest(){
       b = 'No se que poner';
       break;
     }
-return b;
+return questionChoosed;
 }
 function randomPun(){
-  var a = Math.floor(Math.random()*(6-1)+1);
+  var randomNum = Math.floor(Math.random()*(6-1)+1);
   //console.log(a);
-  var b;
+  var punishChoosed;
   switch(a) {
     case 1:
       b = 'Hazle un bocata a quien te pregunta';
@@ -96,11 +95,11 @@ function randomPun(){
       break;
 
 }
-return b;
+return punishChoosed;
 }
-function  iconImage(f){
-  console.log(f);
-  var b;
+function  iconImage(numReq){
+  console.log(numReq);
+  var imgURL;
   switch(f) {
     case 1:
       b = 'https://media.istockphoto.com/vectors/red-polygonal-mosaic-background-vector-id527522686?k=6&m=527522686&s=612x612&w=0&h=JJ3672xp6Ylf4Jx4UMAInsq4WvBE4T-rPC4PfaAolVw=';
@@ -115,5 +114,5 @@ function  iconImage(f){
       b = 'https://nolosabia.net/wp-content/uploads/2014/10/amarillo-fondo-de-pantalla.jpg';
       break;
     }
-    return b;
+    return imgURL;
   }
